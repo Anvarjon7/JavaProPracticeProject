@@ -5,4 +5,6 @@ public interface RemoteRelation {
     void switchOff();
 
     void switchProgram();
+
+    String autorization();
 }
