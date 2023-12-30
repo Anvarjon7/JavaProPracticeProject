@@ -17,6 +17,11 @@ public class CoffeeMachine implements RemoteRelation, AndroidApp {
     }
 
     @Override
+    public String authorization() {
+        return null;
+    }
+
+    @Override
     public void install() {
         System.out.println("install Android " + FREE_PAY);
     }

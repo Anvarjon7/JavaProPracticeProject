@@ -21,7 +21,7 @@ public class TV implements RemoteRelation {
     }
 
     @Override
-    public String autorization() {
+    public String authorization() {
         // взять юзера из Андроид ТВ
         return "Я пользователь Вася, взять с Андроид ТВ";
     }

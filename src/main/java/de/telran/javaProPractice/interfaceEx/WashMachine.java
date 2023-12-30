@@ -20,6 +20,11 @@ public class WashMachine implements RemoteRelation,IosApp {
     }
 
     @Override
+    public String authorization() {
+        return null;
+    }
+
+    @Override
     public void install() {
         System.out.println("I can install only through WEB");
     }

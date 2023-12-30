@@ -6,5 +6,5 @@ public interface RemoteRelation {
 
     void switchProgram();
 
-    String autorization();
+    String authorization();
 }
