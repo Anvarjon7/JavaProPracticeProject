@@ -2,7 +2,7 @@ package de.telran.javaProPractice;
 
 public class Employee extends Person {
     public Employee(String name, String company) {
-        super(name);
+        super(name, 20);
         this.company = company;
     }
     String company;
@@ -20,7 +20,7 @@ public class Employee extends Person {
 
     public static void main(String[] args) {
 
-        Person tom = new Person("Tom");
+        Person tom = new Person("Tom", 20);
         Employee sam = new Employee("Sam","Apple");
 
         sam.display();

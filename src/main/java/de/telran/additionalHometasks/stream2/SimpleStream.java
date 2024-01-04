@@ -1,4 +1,4 @@
-package de.telran.additionalHometasks;
+package de.telran.additionalHometasks.stream2;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -99,5 +99,13 @@ class Person {
 
     public int getAge() {
         return age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
