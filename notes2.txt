@@ -1,0 +1,3 @@
+Hello World!Welcome to JAVA
+Name: Tom Age: 23 
+PrintStream
