@@ -1,16 +1,551 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DBNavigator.Project.DDLFileAttachmentManager">
+    <mappings />
+    <preferences />
+  </component>
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="false" />
+    <value-preview-pinned value="false" />
+  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
+  </component>
+  <component name="DBNavigator.Project.DatabaseConsoleManager">
+    <connection id="bc01c1f9-0578-467e-a10d-3b2095c934e1">
+      <console name="lesson_3" type="STANDARD" schema="gt220823" session="Main"><![CDATA[use gt220823
+
+
+
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Anna'
+        , 'Khachaturyan'
+        , 'Senior Teacher'
+        , 22
+        , 'N'
+        , 'annakhach5'
+        );
+
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Tom'
+        , 'Austin'
+        , 'Junior Blogger'
+        , 25
+        , 'Y'
+        , 'tom12345'
+        );
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Bill'
+        , 'Lorentz'
+        , 'Junior Web Developer'
+        , 40
+        , 'Y'
+        , 'billt1'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Lily'
+        , 'May'
+        , 'Junior Backend Developer'
+        , 25
+        , 'Y'
+        , 'lil12'
+        );
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Nona'
+        , 'Lucky'
+        , 'Junior Teacher'
+        , 20
+        , 'N'
+        , 'LuckyNona'
+        ); 
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ( 'Nancy'
+        , 'Greenberg'
+        , 'Middle UI Designer'
+        , 32
+        , 'Y'
+        , 'nancy1'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Daniel'
+        , 'Faviet'
+        , 'Senior UX Designer'
+        , 43
+        , 'Y'
+        , 'favietD'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Ally'
+        , 'Austin'
+        , 'Junior UI Designer'
+        , 28
+        , 'N'
+        , 'ally1'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Lily'
+        , 'Chen'
+        , 'Senior Teacher'
+        , 25
+        , 'Y'
+        , 'lilychen'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Anna'
+        , 'Austin'
+        , 'Middle Teacher'
+        , 34
+        , 'Y'
+        , 'anna28'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Alexander'
+        , 'Lorentz'
+        , 'Junior Backend Developer'
+        , 25
+        , 'N'
+        , 'alex12345'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Ashley'
+        , 'Lorentz'
+        , 'Junior UX Designer'
+        , 18
+        , 'N'
+        , 'lorentz99'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Tom'
+        , 'Lucky'
+        , 'Middle Blogger'
+        , 34
+        , 'Y'
+        , 'lucky78'
+        );        
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Ashley'
+        , 'Weiss'
+        , 'Junior Blogger'
+        , 18
+        , 'N'
+        , 'weiss11'
+        );
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Tom'
+        , 'Weiss'
+        , 'Junior UI Designer'
+        , 18
+        , 'N'
+        , 'tom222'
+        );   
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Anna'
+        , 'Bloom'
+        , 'Middle UX Designer'
+        , 20
+        , 'N'
+        , 'bloom5'
+        );   
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Tom'
+        , 'Berg'
+        , 'Middle Teacher'
+        , 34
+        , 'N'
+        , 'tommy1'
+        );   
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Ashley'
+        , 'Berg'
+        , 'Senior Teacher'
+        , 37
+        , 'N'
+        , 'ash89'
+        );
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Lily'
+        , 'Weiss'
+        , 'Middle Blogger'
+        , 45
+        , 'N'
+        , 'lilyW1'
+        );   
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Anna'
+        , 'Lorentz'
+        , 'Senior UX Designer'
+        , 31
+        , 'N'
+        , 'annlo1'
+        );   
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Ashley'
+        , 'Weiss'
+        , 'Middle UX Designer'
+        , 18
+        , 'N'
+        , 'weiss1'
+        );       
+insert into Staff(firstname, lastname, position, age, has_child, username) values 
+        ('Anna'
+        , 'Keren'
+        , 'Junior UX Designer'
+        , 34
+        , 'N'
+        , 'annaK1'
+        );       
+
+
+
+
+-- age_groups
+-- <=18, group1
+-- >18 and <=40, group2
+-- >40, group3 
+
+select * ,
+case
+	when age<=18
+		then 'group1'
+	when age>18 and age<=40
+		then 'group2'
+	when age>40
+		then 'group3'
+    end as age_groups
+from staff
+order by id asc
+
+
+select *,
+    case 
+        when has_child = 'N'
+            then 'НЕТ ДЕТЕЙ'
+        when has_child = 'Y'
+            then 'ЕСТЬ ДЕТИ'
+        end as info
+from staff
+
+
+-- select *, 
+-- case
+-- 	when age<=18
+-- 		then 'group1'
+-- 	when age>18 and age<=40
+-- 		then 'group2'
+-- 	when age>40
+-- 		then 'group3'
+-- end as age_groups
+-- from staff;
+
+select *, 
+case
+	when age<=18
+		then 'group1'
+	when age<=40
+		then 'group2'
+	else 'group3'
+end as age_groups
+from staff;
+use gt220823
+
+
+insert into phones(product_name, product_count, starting_price)
+values ('iPhone 10 pro', 3, 700),
+		('iPhone 11 pro', 2, 760),
+        ('iPhone 12', 5, 900),
+        ('iPhone 12 pro', 7, 950),
+        ('iPhone 13', 15, 1050), 
+        ('iPhone 13 pro max', 10, 1150),
+        ('iPhone 14', 1, 1200),
+        ('iPhone 14 pro', 16, 1300),
+        ('iPhone 15', 2, 850)
+;
+
+select *,
+        case
+            when product_count <= 2
+                then 'товар заканчивается'
+            when product_count <= 5 
+                then 'мало товара'
+            when product_count <= 10
+                then 'есть в наличии'
+            else 'много товара'
+            end as count_info
+from phones
+
+select *,
+    case 
+        when starting_price < 700
+            then 'null'
+        when starting_price = 700 and starting_price < 850
+            then '15'
+    else '25'
+    end as tax
+from phones;
+
+
+use oe;
+
+select * from order_items
+select * from customers
+
+
+
+
+select  
+        cust_first_name,
+        cust_last_name,
+        case 
+            when credit_limit < 600 then 1
+            when credit_limit < 800 then 2
+            else 3
+            end as result 
+from customers
+
+-- Если у покупателя сумма order_total больше 15000 вывести member, в остальных случаях 
+-- new, также вывести id покупателя.
+
+
+select * from orders;
+
+
+-- 1. Для каждого находим сумму order_total
+
+select customer_id, sum(order_total)
+from orders
+group by customer_id; 
+
+-- 2. Если у покупателя сумма order_total больше 15000 вывести member, в остальных случаях new
+
+ select customer_id, 
+ case
+	when sum(order_total)>15000 then 'member'
+    else 'new'
+ end as sum
+from orders
+group by customer_id;
+
+select * from product_information
+
+
+
+select 
+        product_name,
+        case 
+            when list_price - min_price > 100 then LIST_PRICE - MIN_PRICE 
+            else null
+            end as result 
+from product_information;
+
+
+use gt220823;
+select * from phones;
+
+
+alter table phones
+add count_info varchar(128);
+
+
+
+set sql_safe_updates = 0;
+
+update phones
+set count_info = 
+case
+	when Product_Count<=2 then 'Товар заканчивается'
+	when Product_Count<=5 then 'Мало товара'
+    when Product_Count<=10 then 'Есть в наличии'
+    else 'Много товара'
+end;]]></console>
+      <console name="lesson_4" type="STANDARD" schema="airport" session="Main"><![CDATA[use airport
+
+select * from airliners
+select * from clients
+select * from tickets
+select * from trips
+
+----------------------------------------------------------------
+
+select
+	trip_code
+from trips
+where departure in ('SVO', 'VKO', 'DME')
+and status = 'departed';
+
+----------------------------------------------------------------
+
+select 
+        range_val,
+        side_number
+from airliners
+where range_val > 1000 and range_val <= 2500 or  range_val >= 6000
+
+select 
+        id
+from tickets
+where ((service_class = 'Business' and price < 65000)
+or
+      (service_class = 'Economy' and price > 15000))
+and
+trip_id not in ('VR5SF5YIWN','OZAO28DLFP','LL4S1G8PQW')
+
+----------------------------------------------------------------
+
+select 
+        model_name,
+case 
+    when range_val > 1000 and range_val <= 2500
+    then 'short_haul'
+    when range_val > 2500 and range_val <= 6000
+    then 'medium_haul'
+    when range_val > 6000 
+    then 'long_haul'
+    else 'undefined'
+    end as category 
+from airliners 
+
+----------------------------------------------------------------
+
+select 
+        side_number, 
+    case 
+        when production_year < 2000
+        then 'old'
+        when production_year between 2000 and 2010
+        then 'mid'
+        else 'new'  
+    end as age
+from airliners
+where range_val <= 10000]]></console>
+      <console name="MySQL Connection" type="STANDARD" schema="" session="Main" />
+    </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="bc01c1f9-0578-467e-a10d-3b2095c934e1" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="bc01c1f9-0578-467e-a10d-3b2095c934e1" dataset="hr.countries" active-filter-id="" />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.ObjectQuickFilterManager">
+    <last-used-operator value="EQUAL" />
+    <filters />
+  </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces />
+  </component>
   <component name="DBNavigator.Project.Settings">
-    <connections />
+    <connections>
+      <connection id="bc01c1f9-0578-467e-a10d-3b2095c934e1" active="true" signed="true">
+        <database>
+          <name value="MySQL Connection" />
+          <description value="" />
+          <database-type value="MYSQL" />
+          <config-type value="BASIC" />
+          <database-version value="8.0" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="3306" />
+          <database value="hr" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="root" />
+          <deprecated-pwd value="TXlTUUwyMDIzMjAyMw==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+          <properties>
+            <property key="serverTimezone" value="UTC" />
+          </properties>
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <debugger>
+          <compile-dependencies value="true" />
+          <tcp-driver-tunneling value="false" />
+          <tcp-host-address value="" />
+          <tcp-port-from value="4000" />
+          <tcp-port-to value="4999" />
+          <debugger-type value="ASK" />
+        </debugger>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false" hide-audit-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+    </connections>
     <browser-settings>
       <general>
         <display-mode value="TABBED" />
@@ -359,9 +894,6 @@
         <compile-dependencies value="ASK" />
         <always-show-controls value="false" />
       </compiler>
-      <debugger>
-        <debugger-type value="ASK" />
-      </debugger>
     </operation-settings>
     <ddl-file-settings>
       <extensions>
@@ -407,5 +939,9 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+    <execution-variable-types />
   </component>
 </project>
