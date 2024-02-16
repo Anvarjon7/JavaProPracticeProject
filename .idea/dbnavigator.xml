@@ -421,7 +421,219 @@ select
     end as age
 from airliners
 where range_val <= 10000]]></console>
-      <console name="MySQL Connection" type="STANDARD" schema="" session="Main" />
+      <console name="lesson_5" type="STANDARD" schema="gt220823" session="Main"><![CDATA[use gt220823
+
+select * from phones;
+
+update phones
+
+set starting_price = 
+                    case 
+                        when product_count < 5 then 1000
+                        when product_count between 5 and 10 then 1500
+                    else 2000
+               end;
+
+set sql_safe_updates = 1;
+
+-- alter table table_name
+--    add - добавление столбца
+--    drop column - удаление столбца
+--    modify - изменения типа данных 
+--    alter column - добавляем значчения по умолчанию
+--    change - изменение имени столбца
+
+-- ограничение
+-- not null - не может быть null
+-- unique - должен быть уникальным 
+-- primary key - not null + unique
+-- check - проверка условии
+-- default - значение по умолчанию
+
+
+--create table products (
+--        id int primary key auto_increment,
+--        title varchar(128),
+--        quantity int check(quantity between 0 and 10),
+--        quality int default 0 
+--);
+
+insert into products
+values ('Apple',15,2);
+
+-- Error; 1136
+
+insert into products(title, quantity, quality)
+values ('Apple',15,2);
+
+-- Error; 3819
+
+insert into products(title, quantity, quality)
+values ('Aplle',9,2);
+
+select * from products;
+
+insert into products(title, quantity)
+values ('Banana',5);
+
+--alter table products
+--add price int default 0;
+--
+--alter table products
+--modify column price numeric(3,2)
+
+--alter table products
+--drop column item_price
+
+create table students(
+    name varchar(128) not null,
+    lastname varchar(128) not null,
+    avg_mark int check(avg_mark between 0 and 5),
+    gender varchar(128) check(gender in ('M','F'))
+);
+
+alter table students
+add id integer primary key auto_increment;
+
+select * from students
+
+alter table students
+drop column id;
+
+alter table students
+add id integer primary key auto_increment first;
+
+alter table students
+add age integer after lastname;
+
+alter table students
+modify column gender char(1);
+
+alter table students
+modify column avg_mark numeric(2,1)
+
+alter table students
+change name firstname varchar(128);
+
+insert into students(firstname,lastname,age,avg_mark,gender)
+values
+		('John','Deph',42,3,'M'),
+        ('Anna','Mari',33,4,'F'),
+        ('Bob','Brown',25,5,'M');
+
+create table employees(
+	fname varchar(128) not null,
+	last_name varchar(128) not null,
+    email varchar (128) not null,
+    phone varchar (64) not null
+    );
+alter table employees
+add employee_id integer primary key auto_increment first;
+    
+select * from employees;
+
+alter table employees
+add salary numeric(9,2);
+
+alter table employees
+modify column salary integer;
+
+alter table employees
+change fname firstname varchar(128);
+
+
+alter table employees
+drop column phone;
+
+alter table employees
+add department varchar(128) not null;]]></console>
+      <console name="lesson_6" type="STANDARD" schema="airport" session="Main"><![CDATA[use airport
+
+-- 2. Выведите идентификаторы и коды перелета для рейсов, использующих самолеты с идентификаторами 00095579, 00045877 и 00619341. 
+-- Отсортируйте вхождения по коду аэропорта назначения в порядке возрастания. 
+-- При одинаковых аэропортах назначения отсортируйте по коду перелета в порядке убывания. 
+-- В выборке должны присутствовать два атрибута — id, trip_code.  
+
+select
+	id,
+    trip_code
+from trips
+where airliner_id in (00095579, 00045877, 00619341)
+order by arrival, trip_code desc;
+
+-- 3. Владельцам аэропорта необходимо возместить ущерб пассажирам, чей багаж намок по вине его сотрудников. 
+-- Возврату подлежат 2500 у. е. за один купленный билет.
+-- Определите номер билета и разницу от его стоимости и той суммы, которую получит пассажир. 
+-- Известно, что нет билетов дешевле 2500 у. е.
+-- Идентификатор рейса — 87RVI5T7A2.
+-- В выборке должны присутствовать два атрибута — id, actual_price.
+
+select * from tickets
+select * from trips
+select * from airliners
+select * from clients
+
+-- 4. Выведите среднюю дальность полета самолетов марки Airbus, которые были выпущены в 2008 году или позже. 
+-- Название моделей самолетов начинается с названия компании-производителя. Например, Airbus A320-200.
+-- В выборке должен присутствовать один атрибут — avg_range.
+
+select 
+        id,
+        price - 2500 as actual_price
+from tickets
+where trip_id = '87RVI5T7A2'
+
+-- 4. Выведите среднюю дальность полета самолетов марки Airbus, которые были выпущены в 2008 году или позже. 
+-- Название моделей самолетов начинается с названия компании-производителя. Например, Airbus A320-200.
+-- В выборке должен присутствовать один атрибут — avg_range.
+
+select 
+        round(avg(range_val)) as avg_range
+from airliners
+where model_name like  'Airbus%' and production_year >= 2008
+
+-- 5. Руководство авиакомпании снизило цены на билеты рейсов OZAO28DLFP, 5QMWLJ4SOC и 8RF8OIOVFR. 
+-- Скидка на билет экономкласса (Economy) составила 15%, на билет первого класса (FirstClass) — 10%, а на билет комфорт-класса (PremiumEconomy) — 20%.
+-- Найдите затраты авиакомпании на акцию, то есть разность стоимости всех билетов и стоимости всех билетов с учетом скидки.
+-- В выборке должен присутствовать один атрибут — expenses.
+
+select 
+        id,
+        trip_id,
+        case 
+            when service_class = 'Economy' then price - (price * 0.15)
+            when service_class = 'PremiumEconomy' then price - (price * 0.20)
+            when service_class = 'Business' then price - (price * 0.10)
+        end as new_price  
+from tickets
+where trip_id in ('OZAO28DLFP', '5QMWLJ4SOC', '8RF8OIOVFR')
+
+-- 6. Руководство авиакомпании снизило цены на билеты рейсов LL4S1G8PQW, 0SE4S0HRRU и JQF04Q8I9G. 
+-- Скидка на билет экономкласса (Economy) составила 15%, на билет бизнес-класса (Business) — 10%, а на билет комфорт-класса (PremiumEconomy) — 20%. 
+-- Определите цену билета в каждом сегменте с учетом скидки.
+-- В выборке должны присутствовать три атрибута — id, trip_id, new_price.
+
+select      
+            sum(
+            case 
+            when service_class = 'Economy' then (price * 0.15)
+            when service_class = 'FirstClass' then (price * 0.10)
+            when service_class = 'PremiumEconomy' then (price * 0.20)
+        end) as expenses
+from tickets  
+where trip_id in ('OZAO28DLFP','5QMWLJ4SOC','8RF8OIOVFR');
+
+-- 7. Выведите данные о рейсах в аэропорт Домодедово (код аэропорта — DME). 
+-- Проследите, чтобы все поля выборки были в нижнем регистре.
+-- В выборке должны присутствовать три атрибута — departure, status, airliner_id.
+
+select 
+        lower(departure) as departure,
+        lower(status) as status,
+        lower(airliner_id) as airliner_id
+from airport.trips
+where arrival = 'DME']]></console>
+      <console name="lesson_7" type="STANDARD" schema="gt220823" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -444,7 +656,9 @@ where range_val <= 10000]]></console>
     <filters />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="MYSQL" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
