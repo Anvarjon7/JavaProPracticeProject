@@ -1,6 +1,6 @@
-package de.telran.javaProPractice.lessonCode.lesson_12_02_24;
+package de.telran.javaProPractice.lessonCode.lesson_12_02_24.myAbstractFactory;
 
-import de.telran.javaProPractice.lessonCode.lesson_12_02_24.Cover;
+import de.telran.javaProPractice.lessonCode.lesson_12_02_24.myAbstractFactory.Cover;
 
 public class Cup {
     private String cupType;
