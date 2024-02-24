@@ -2,7 +2,7 @@ package de.telran.javaProPractice.summary.lesson_16_02_2024;
 
 import org.junit.jupiter.api.Test;
 
-import static de.telran.javaProPractice.summary.lesson_16_02_2024.Main.findMax;
+import static de.telran.javaProPractice.summary.lesson_16_02_2024.test.Main.findMax;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {

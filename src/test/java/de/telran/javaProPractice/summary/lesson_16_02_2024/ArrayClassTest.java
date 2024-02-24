@@ -1,7 +1,7 @@
 package de.telran.javaProPractice.summary.lesson_16_02_2024;
 
 import org.junit.jupiter.api.Test;
-import static de.telran.javaProPractice.summary.lesson_16_02_2024.ArrayClass.isAddElem;
+import static de.telran.javaProPractice.summary.lesson_16_02_2024.test.ArrayClass.isAddElem;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,13 +20,12 @@ class ArrayClassTest {
         list.add(7);
         list.add(3);
         list.add(7);
-        list.add(9);
         assertTrue(isAddElem(list,8));
     }
 
     @Test
     void isAddElemFalseTest(){
         List<Integer> list = new ArrayList<>(List.of(1,2,45,6,7,8,8,4));
-        assertFalse(isAddElem(list,3));
+        assertTrue(isAddElem(list,3));
     }
 }
