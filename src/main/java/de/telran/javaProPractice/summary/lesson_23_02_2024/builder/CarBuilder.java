@@ -1,6 +1,7 @@
 package de.telran.javaProPractice.summary.lesson_23_02_2024.builder;
 
 import de.telran.javaProPractice.summary.lesson_23_02_2024.car.Car;
+import de.telran.javaProPractice.summary.lesson_23_02_2024.car.CarType;
 import de.telran.javaProPractice.summary.lesson_23_02_2024.components.*;
 
 public class CarBuilder implements Builder{
@@ -12,7 +13,7 @@ public class CarBuilder implements Builder{
     private TripComputer tripComputer;
     private GPSNavigator gpsNavigator;
     @Override
-    public void setCarype(CarType carType) {
+    public void setCarType(CarType carType) {
         this.carType = carType;
     }
 
